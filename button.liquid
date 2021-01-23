@@ -1,0 +1,57 @@
+<div id="section-cta">
+  <div class="page-width" align="center">
+	<h3> {{ section.settings.text-box }} </h3>
+  	<a href="{{ section.settings.link }}" class="btn btn--cta">{{ section.settings.linktext }}</a>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Button",
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click Here"
+    }
+  ],
+	
+	"presets": [
+		{
+			"name": "Button",
+			"category": "Call to Action"
+		}
+	]
+}
+{% endschema %}
+
+{% stylesheet %}
+.button {
+  display: inline-block;
+  padding: 0.85em 1.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #5c6ac4;
+  border: none;
+  border-radius: 0.62em;
+  box-shadow: 0 0.25em #999999; 
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
